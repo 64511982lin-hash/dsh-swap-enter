@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Swap Enter and Shift+Enter",
+    "description": "In the chat composer, Enter inserts a newline and Shift+Enter sends the message."
+  }
+}

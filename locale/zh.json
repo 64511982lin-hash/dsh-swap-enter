@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "交换 Enter 与 Shift+Enter",
+    "description": "在聊天输入框中，Enter 插入换行，Shift+Enter 发送消息。"
+  }
+}

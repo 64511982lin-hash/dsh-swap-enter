@@ -1,0 +1,60 @@
+{
+  "name": "dsh-swap-enter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Swaps Enter and Shift+Enter in the DSH chat composer: Enter inserts a newline, Shift+Enter sends.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/64511982lin-hash/dsh-swap-enter.git"
+  },
+  "homepage": "https://github.com/64511982lin-hash/dsh-swap-enter#readme",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "composer",
+    "keyboard",
+    "keybinding",
+    "enter",
+    "newline"
+  ],
+  "exports": {
+    ".": { "default": "./index.js" },
+    "./client": { "default": "./client.js" },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node test/swap-enter.test.cjs"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+    },
+    "manifestVersion": 1
+  }
+}
